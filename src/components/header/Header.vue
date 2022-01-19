@@ -1,11 +1,11 @@
 <template>
     <header class="main-head">
-        <nav class="">
+        <nav>
             <div class="logo">
-                <h1>Matias Casal</h1>
+                <h1>VUE NFT</h1>
             </div>
             <div class="burger-header">
-                <BurgerMenu/>
+                 <BurgerMenu/> 
             </div>
             <div class="menu-header">
                 <ul>
@@ -134,15 +134,27 @@ nav{
         height: 4rem;
     }
 
-    @media screen and (max-width:930px){
-        .menu-header { 
-            display: none;
-        }
-        .burger-header {
-            display: block;
-        }
-    }
 
 }
+
+/*
+@media screen and (max-width:930px){
+        nav .menu-header { 
+            display: none;
+        }
+        nav .burger-header {
+            display: inline;
+        }
+
+        .main-head{
+            width: 100%;
+        }
+        nav {
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+*/
 
 </style>

@@ -1,17 +1,20 @@
 <template>
-    <div>
-        <Header/>
+    <div class="webapp">
+        <Header class="header-class"/>
+        <Home class="home-class"/>
     </div>
 </template>
 
 <script>
 
 import Header from './header/Header.vue';
+import Home from './home/Home.vue';
 
 export default {
     name: 'NftApp',
     components: {
-        Header
+        Header,
+        Home
     }
 }
 </script>
@@ -66,6 +69,75 @@ export default {
     a {
         text-decoration: none;
         color: $gray-text;
+    }
+
+    @media screen and (max-width:712px){
+        html, body {
+            font-size: 40.5%;
+            margin: 0;
+            padding: 0;
+        }
+
+        
+        /* header */
+        .main-head{
+            width: 100%;
+        }
+
+
+        .main-head nav{
+            @include flex(center, center, row);
+                
+            .logo{
+                flex: 1 1 10rem;
+                margin-top: 2rem;
+            }
+            .menu-header { 
+                display: none;
+            }
+            .burger-header {
+                flex: 1 1 10rem;
+                display: block;
+            }
+        }
+        /* fin header */
+
+        /*Texto y titulo*/
+        .intro {
+            @include flex(center, center, column);
+
+            .intro-text{
+                margin-top: 5rem;
+                text-align: center;
+                align-items: center;
+                
+                .intro-button{
+                    flex: 2 1 10rem;
+                    .explore-button{
+                        width: 100%;
+                    }
+                }
+                .intro-stats{
+                    flex: 1 1 10rem;
+                    .column_stats1{margin: 2rem;}
+                    .column_stats2{margin: 2rem;}
+                    .column_stats3{margin: 2rem;}
+                }
+            }
+            .intro-images{
+                    margin-top: 5rem;
+                    svg {
+                        display: block;
+                        margin: auto;
+                    }
+                }
+           
+        }
+        /*fin texto y titulo*/
+
+       
+
+       
     }
 
 </style>

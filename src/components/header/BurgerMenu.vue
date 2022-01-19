@@ -1,6 +1,6 @@
 <template>
 
-    <Slide right width="500">
+    <Slide right width="400">
         <div class="menu-burger">
             <ul>
                 <li><a class="active" href="/">Home</a></li>
@@ -35,13 +35,14 @@ export default {
 <style lang="scss" scoped>
 
     .menu-burger{
-        width: 100%;
+        width: 90%;
         height: 100%;
         top: 0;
-        left: 100%;
         flex-direction: column;
         align-items: center;
         transition: transform 1s ease;
+
+        
     }
 
     .menu-burger a{
@@ -51,7 +52,7 @@ export default {
 
     .menu-burger li {
         padding: 2rem 2rem;
-        margin: 2rem 2rem;
+        margin: 1rem 1rem;
     }
 
     .actions-header {
