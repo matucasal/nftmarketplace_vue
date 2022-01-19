@@ -3,9 +3,9 @@
     <Slide right width="400">
         <div class="menu-burger">
             <ul>
-                <li><a class="active" href="/">Home</a></li>
-                <li><a href="./projects/" >Projects</a></li>
-                <li><a href="/contact/" >Contact</a></li>
+                <li><a class="active" href="/">Mercado</a></li>
+                <li><a href="./projects/" >Recursos</a></li>
+                <li><a href="/contact/" >Acerca</a></li>
             </ul>
             <div class="actions-header">
                 <section class="search-section">
