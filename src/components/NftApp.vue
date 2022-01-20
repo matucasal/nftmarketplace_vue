@@ -1,7 +1,8 @@
 <template>
     <div class="webapp">
-        <Header class="header-class"/>
-        <Home class="home-class"/>
+        <Header/>
+        <Home/>
+        <Top/>
     </div>
 </template>
 
@@ -9,12 +10,14 @@
 
 import Header from './header/Header.vue';
 import Home from './home/Home.vue';
+import Top from './top/Top.vue';
 
 export default {
     name: 'NftApp',
     components: {
         Header,
-        Home
+        Home,
+        Top
     }
 }
 </script>
@@ -123,6 +126,7 @@ export default {
                     .column_stats2{margin: 2rem;}
                     .column_stats3{margin: 2rem;}
                 }
+                
             }
             .intro-images{
                     margin-top: 5rem;
@@ -135,6 +139,12 @@ export default {
         }
         /*fin texto y titulo*/
 
+        .intro-extra{
+            flex: 1 1 10rem;
+            .column_extra1{margin-top: 2rem;}
+            .column_extra2{margin-top: 4rem;}
+            .column_extra3{margin-top: 2rem;}
+        }
        
 
        
