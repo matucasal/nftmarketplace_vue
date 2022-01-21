@@ -2,7 +2,7 @@
     <div class="webapp">
         <Header/>
         <Home/>
-        <Top/>
+        <Featured/>
     </div>
 </template>
 
@@ -10,14 +10,14 @@
 
 import Header from './header/Header.vue';
 import Home from './home/Home.vue';
-import Top from './top/Top.vue';
+import Featured from './featured/Featured.vue';
 
 export default {
     name: 'NftApp',
     components: {
         Header,
         Home,
-        Top
+        Featured
     }
 }
 </script>
