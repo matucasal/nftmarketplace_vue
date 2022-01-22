@@ -43,7 +43,7 @@
                 <h5>Últimos 5 días</h5>
             </div>
             <div class="top-collections-list">
-                <div v-for="item in featured_bids" :key="item.id" class="top-collections-card">
+                <div v-for="item in top_collections" :key="item.id" class="top-collections-card">
                     <div class="top-collections-card-number"><h4>{{item.id}}</h4></div>
                     <div class="top-collections-card-img">
                         <img src="@/assets/imgs/splashbid_img.png" alt="">
@@ -56,7 +56,8 @@
                             </div>
                         </div>
                         <div class="top-collections-card-stats">
-                            <span>{{ item.stat }}</span> 
+                            <span v-if="item.stats > 0" style="color: green">{{ item.stats }} %</span> 
+                            <span v-else style="color: #FF002E" >{{ item.stats }} %</span> 
                         </div>
                     </div>
                 </div>
@@ -75,9 +76,11 @@ export default {
                 { id: 2,tittle: 'Item 3' ,price:0.01},
             ],
             top_collections: [
-                { id: 0,tittle: 'CryptoFunks', value:20050, stats: '+23.52' },
+                { id: 0,tittle: 'CryptoFunks', value:20050, stats: '23.52' },
                 { id: 1,tittle: 'CryptoCars', value:1050, stats: '-40.12' },
-                { id: 2,tittle: 'BombCrypto', value:1050, stats: '-40.12' },
+                { id: 2,tittle: 'BombCrypto', value:999050, stats: '-20.13' },
+                { id: 3,tittle: 'Axie Infinity', value:1550, stats: '-40.15' },
+                { id: 4,tittle: 'Dinox', value:10020, stats: '-0.37' },
             ]
         }
     
@@ -197,10 +200,9 @@ export default {
             height: 70vh;
             min-height: 50vh;
             flex: 1 1 10rem;
-            border: 1px solid red;
             @include flex (flex-start, flex-start, column);
             .top-collections-tittle{
-                h4{
+                h3{
                     font-size: $header4;
                 }
                 h5{
@@ -210,18 +212,15 @@ export default {
                 }
             }
             .top-collections-card{
-                margin-top: 0rem;
-                margin: 3rem 5rem 5rem 5rem;
-                padding: 2rem;
-                @include flex (space-between,center, row);
-                border: 1px solid red;
+                margin: 2rem 5rem 2rem 0rem;
+                padding: 0.7rem;
+                @include flex (center,center, row);
                 .top-collections-card-number{
-                    flex: 1 1 auto;
-                    border: 1px solid red;
+                    margin: 1rem;
+                    flex: 1 1 1rem;
                 }
                 .top-collections-card-img{
-                    border: 1px solid red;
-                    flex: 1 1 auto;
+                    flex: 1 1 2rem;
                     img{
                         box-sizing: border-box;
                         width: 50px;
@@ -230,19 +229,15 @@ export default {
                     }
                 }
                 .top-collections-card-content{
-                    flex: 1 1 auto;
-                    border: 1px solid red;
-                    @include flex (center,center, row);
+                    flex: 1 1 100%;
+                    @include flex (flex-start,center, row);
                     .top-collections-card-tittle{
-                        border: 1px solid red;
-                        justify-content: center;
+                        flex: 1 1 auto;
                         margin-right: 16px;
                         font-size: 16px;
-                        align-items: flex-start;
                         
                         .top-collections-card-price{
-                            border: 1px solid red;
-                            @include flex (space-between,center, row);
+                            @include flex (flex-start,flex-start, row);
                         }
                         
                         img{
@@ -259,7 +254,6 @@ export default {
 
                     .top-collections-card-stats{
                         span{
-                            color: #FF002E;
                             font-size: 1.5rem;
                             letter-spacing: 0.4px;
                             word-spacing: 1.4px;
