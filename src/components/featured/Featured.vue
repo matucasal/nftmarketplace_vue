@@ -44,19 +44,19 @@
             </div>
             <div class="top-collections-list">
                 <div v-for="item in featured_bids" :key="item.id" class="top-collections-card">
-                    <div class="top-collections-card-number">{{item.id}}</div>
-                    <div class="last-bid-card-img">
+                    <div class="top-collections-card-number"><h4>{{item.id}}</h4></div>
+                    <div class="top-collections-card-img">
                         <img src="@/assets/imgs/splashbid_img.png" alt="">
                     </div>
                     <div class="top-collections-card-content">
                         <div class="top-collections-card-tittle">
-                            <h4>{{ item.tittle }}</h4>
-                        </div>
-                        <div class="top-collections-card-value">
-                            <img src="@/assets/icons/eth_icon.svg" alt="ethereum-symbol">  <span>{{ item.price }} ETH </span>  
+                            <h5>{{ item.tittle }}</h5> <br/>
+                            <div class="top-collections-card-price">
+                                <img src="@/assets/icons/eth_icon.svg" alt="ethereum-symbol">  <span>{{ item.value }} ETH </span> 
+                            </div>
                         </div>
                         <div class="top-collections-card-stats">
-                            <button>Comprar</button>
+                            <span>{{ item.stat }}</span> 
                         </div>
                     </div>
                 </div>
@@ -73,6 +73,11 @@ export default {
                 { id: 0,tittle: 'Item 1', price:0.25 },
                 { id: 1,tittle: 'Item 2' ,price:0.55},
                 { id: 2,tittle: 'Item 3' ,price:0.01},
+            ],
+            top_collections: [
+                { id: 0,tittle: 'CryptoFunks', value:20050, stats: '+23.52' },
+                { id: 1,tittle: 'CryptoCars', value:1050, stats: '-40.12' },
+                { id: 2,tittle: 'BombCrypto', value:1050, stats: '-40.12' },
             ]
         }
     
@@ -141,7 +146,7 @@ export default {
                     flex: 1 1 10rem;
                     img{
                         box-sizing: border-box;
-                        width: 100;
+                        width: 100px;
                         height: 100px;
                         object-fit: contain;
                     }
@@ -193,7 +198,7 @@ export default {
             min-height: 50vh;
             flex: 1 1 10rem;
             border: 1px solid red;
-            @include flex (space-between, flex-start, column);
+            @include flex (flex-start, flex-start, column);
             .top-collections-tittle{
                 h4{
                     font-size: $header4;
@@ -202,6 +207,65 @@ export default {
                     margin-top: 0.5rem;
                     font-size: $header5;
                     color: #3D00B7;
+                }
+            }
+            .top-collections-card{
+                margin-top: 0rem;
+                margin: 3rem 5rem 5rem 5rem;
+                padding: 2rem;
+                @include flex (space-between,center, row);
+                border: 1px solid red;
+                .top-collections-card-number{
+                    flex: 1 1 auto;
+                    border: 1px solid red;
+                }
+                .top-collections-card-img{
+                    border: 1px solid red;
+                    flex: 1 1 auto;
+                    img{
+                        box-sizing: border-box;
+                        width: 50px;
+                        height: 50px;
+                        object-fit: contain;
+                    }
+                }
+                .top-collections-card-content{
+                    flex: 1 1 auto;
+                    border: 1px solid red;
+                    @include flex (center,center, row);
+                    .top-collections-card-tittle{
+                        border: 1px solid red;
+                        justify-content: center;
+                        margin-right: 16px;
+                        font-size: 16px;
+                        align-items: flex-start;
+                        
+                        .top-collections-card-price{
+                            border: 1px solid red;
+                            @include flex (space-between,center, row);
+                        }
+                        
+                        img{
+                            box-sizing: border-box;
+                            width: 15px;
+                            height: 15px;
+                            object-fit: contain;
+                        }
+
+                        span{
+                            font-size: 1.3rem;
+                        }
+                    }
+
+                    .top-collections-card-stats{
+                        span{
+                            color: #FF002E;
+                            font-size: 1.5rem;
+                            letter-spacing: 0.4px;
+                            word-spacing: 1.4px;
+                            font-weight: 1000;
+                        }
+                    }
                 }
             }
 
