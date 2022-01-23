@@ -105,6 +105,7 @@ export default {
         }
         /* fin header */
 
+        /*HOme vue*/
         /*Texto y titulo*/
         .intro {
             @include flex(center, center, column);
@@ -138,15 +139,43 @@ export default {
            
         }
         /*fin texto y titulo*/
-
         .intro-extra{
             flex: 1 1 10rem;
             .column_extra1{margin-top: 2rem;}
             .column_extra2{margin-top: 4rem;}
             .column_extra3{margin-top: 2rem;}
         }
-       
+        /* FIn HOme vue*/
 
+
+        /*Featured vue*/
+        .top-section {
+            margin-top: 5rem;
+            width: 100%;
+            flex-wrap: wrap;
+            @include flex (flex-start,center, column);
+            .first-top-column{
+                margin-right: 0;
+                border: 1px solid red;
+                height: 70vh;
+                min-height: 50vh;
+                .last-sale-img{
+                    img{
+                        width: 200;
+                        height: 200px;
+                    }
+                }
+                .last-sale-text{
+                    margin-right: 0;
+                    border: 1px solid red;
+                }
+                
+            }
+            .second-top-column{}
+            .third-top-column{}
+        
+        }
+        /*Fin featured vue*/
        
     }
 
