@@ -267,4 +267,48 @@ export default {
     }
 
 
+
+
+        @media screen and (max-width:712px){
+            /*Featured vue*/
+            .top-section {
+                margin-top: 5rem;
+                width: 100%;
+                flex-wrap: wrap;
+                @include flex (flex-start,center, column);
+                .first-top-column{
+                    margin-right: 0;
+                    padding: 0;
+                    border: 1px solid red;
+                    height: 70vh;
+                    min-height: 50vh;
+                    .last-sale-img{
+                        @include flex (flex-start,center, column);
+                        border: 1px solid red;
+                        padding: 1rem;
+                        margin: 1rem;
+                        img{
+                            width: 100%;
+                            border: 1px solid red;
+                            width: 200;
+                            height: 200px;
+                        }
+                    }
+                    .last-sale-text{
+                        margin-right: 0;
+                        border: 1px solid red;
+                        @include flex (flex-start,center, column);
+                    }
+                    
+                }
+                .second-top-column{
+                    border: 1px solid red;
+                }
+                .third-top-column{
+                    border: 1px solid red;
+                }
+            
+            }
+            /*Fin featured vue*/
+        }
 </style>

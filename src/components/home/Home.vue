@@ -131,34 +131,87 @@
     }
 
     .intro-extra{
-        margin: auto;
-        flex-wrap: wrap;
-        @include flex (space-around,center, row);
         font-size: 1.2rem;
         margin-top: 5rem;
         background-color: #D9E0EC;
-        width: 100%;
         padding: 8rem;
+        @include flex (space-around,center, row);
         .column_extra1{
             margin-right: 2rem;
-            flex: 1 1 1rem;
+            flex: 3 1 2rem;
             align-items: center;
             justify-content: center;
         }
         .column_extra2{
             margin-right: 2rem;
-            flex: 1 1 1rem;
+            flex: 1 1 auto;
             align-items: center;
             justify-content: center;
         }
         .column_extra2{
-            flex: 1 1 1rem;
+            flex: 1 1 auto;
             align-items: center;
             justify-content: center;
         }
     }
 
     
+    @media screen and (max-width:712px){
+        
+         /*HOme vue*/
+        /*Texto y titulo*/
+        .intro {
+            @include flex(center, center, column);
+
+            .intro-text{
+                margin-top: 5rem;
+                text-align: center;
+                align-items: center;
+                
+                .intro-button{
+                    flex: 2 1 10rem;
+                    .explore-button{
+                        width: 100%;
+                    }
+                }
+                .intro-stats{
+                    flex: 1 1 10rem;
+                    .column_stats1{margin: 2rem;}
+                    .column_stats2{margin: 2rem;}
+                    .column_stats3{margin: 2rem;}
+                }
+                
+            }
+            .intro-images{
+                    flex: 1 1 30rem;
+                    margin-top: 10rem;
+                    svg {
+                        display: block;
+                        margin: auto;
+                    }
+                }
+           
+        }
+        
+
+        .intro-extra{
+            font-size: 1.2rem;
+            padding-top: 5rem;
+            @include flex (center,center, column);
+            .column_extra1{
+                margin-top: 2rem;
+            }
+            .column_extra2{
+                margin-top: 2rem;
+            }
+            .column_extra3{
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+                
+            }
+        }
+        
+    }
     /*
      @media screen and (max-width:930px){
         .intro {
