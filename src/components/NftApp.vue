@@ -74,7 +74,7 @@ export default {
         color: $gray-text;
     }
 
-    @media screen and (max-width:712px){
+    @media screen and (max-width:912px){
         html, body {
             font-size: 40.5%;
             margin: 0;

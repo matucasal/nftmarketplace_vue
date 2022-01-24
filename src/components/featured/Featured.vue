@@ -92,7 +92,7 @@ export default {
 <style lang="scss">
     .top-section {
         min-height: 90vh;
-        width: 90%;
+        width: 100%;
         flex-wrap: wrap;
         @include flex (flex-start,center, row);
         .first-top-column{
@@ -269,43 +269,52 @@ export default {
 
 
 
-        @media screen and (max-width:712px){
+        @media screen and (max-width:912px){
             /*Featured vue*/
             .top-section {
                 margin-top: 5rem;
-                width: 100%;
                 flex-wrap: wrap;
-                @include flex (flex-start,center, column);
+                @include flex (center,center, column);
                 .first-top-column{
-                    margin-right: 0;
-                    padding: 0;
-                    border: 1px solid red;
-                    height: 70vh;
-                    min-height: 50vh;
+                    flex: 1 0;
+                    height: 100vh;
+                    min-height: auto;
                     .last-sale-img{
                         @include flex (flex-start,center, column);
-                        border: 1px solid red;
                         padding: 1rem;
                         margin: 1rem;
                         img{
                             width: 100%;
-                            border: 1px solid red;
                             width: 200;
                             height: 200px;
                         }
                     }
                     .last-sale-text{
-                        margin-right: 0;
-                        border: 1px solid red;
-                        @include flex (flex-start,center, column);
+                        @include flex (center,center, column);
+                        .last-sale-tittle{
+                            flex: 1 0;
+                            span{
+                                display: none;
+                            }
+                        }
+                        .last-sale-bid{
+                            flex: 1 0;
+                        }
+                        
                     }
                     
                 }
                 .second-top-column{
-                    border: 1px solid red;
+                    flex: 1 0;
+                    height: 100vh;
+                    min-height: auto;
+                    margin-top: 4rem;
                 }
                 .third-top-column{
-                    border: 1px solid red;
+                    flex: 1 0;
+                    height: 100vh;
+                    min-height: auto;
+                    margin-top: 4rem;
                 }
             
             }

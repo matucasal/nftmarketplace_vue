@@ -103,18 +103,19 @@
         font-size: 1.5rem;
         .column_stats1{
             margin-right: 2rem;
-            flex: 1 1 1rem;
+            flex: 1 1 auto;
             align-items: center;
             justify-content: center;
         }
         .column_stats2{
             margin-right: 2rem;
-            flex: 1 1 1rem;
+            flex: 1 1 auto;
             align-items: center;
             justify-content: center;
         }
-        .column_stats2{
-            flex: 1 1 1rem;
+        .column_stats3{
+            margin-right: 2rem;
+            flex: 1 1 auto;
             align-items: center;
             justify-content: center;
         }
@@ -156,7 +157,7 @@
     }
 
     
-    @media screen and (max-width:712px){
+    @media screen and (max-width:912px){
         
          /*HOme vue*/
         /*Texto y titulo*/
@@ -164,18 +165,21 @@
             @include flex(center, center, column);
 
             .intro-text{
+                flex: 1 1 auto;
                 margin-top: 5rem;
                 text-align: center;
-                align-items: center;
+                
                 
                 .intro-button{
-                    flex: 2 1 10rem;
+                    margin-top: 5rem;
+                    flex: 1 1 auto;
                     .explore-button{
                         width: 100%;
                     }
                 }
                 .intro-stats{
-                    flex: 1 1 10rem;
+                    flex: 1 1 auto;
+                    margin-top: 0rem;
                     .column_stats1{margin: 2rem;}
                     .column_stats2{margin: 2rem;}
                     .column_stats3{margin: 2rem;}
@@ -184,7 +188,7 @@
             }
             .intro-images{
                     flex: 1 1 30rem;
-                    margin-top: 10rem;
+                    margin-top: 5rem;
                     svg {
                         display: block;
                         margin: auto;
@@ -212,20 +216,7 @@
         }
         
     }
-    /*
-     @media screen and (max-width:930px){
-        .intro {
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0;
-            width: 100%;
-        }
-
-      
-    }*/
-
+    
    
 
 </style>
