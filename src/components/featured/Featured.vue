@@ -155,8 +155,8 @@ export default {
                     }
                 }
                 .last-bid-card-content{
-                    margin: 0rem 5rem 0rem 3rem;
-                    flex: 1 1 10rem;
+                    margin: 1rem 5rem 0rem 3rem;
+                    flex: 1 1 auto;
                     @include flex (center,center, column);
                     .last-sale-bid-price{
                         @include flex (space-between,center, row);
@@ -173,7 +173,7 @@ export default {
                         object-fit: contain;
                     }
                     .last-bid-card-button{
-                        margin-top: 0.5rem;
+                        margin-top: 1.5rem;
                         button{
                             font-size: $button-text;
                             width: 100%;
@@ -217,10 +217,10 @@ export default {
                 @include flex (center,center, row);
                 .top-collections-card-number{
                     margin: 1rem;
-                    flex: 1 1 1rem;
+                    flex: 1 1 auto;
                 }
                 .top-collections-card-img{
-                    flex: 1 1 2rem;
+                    flex: 1 1 auto;
                     img{
                         box-sizing: border-box;
                         width: 50px;
@@ -233,6 +233,7 @@ export default {
                     @include flex (flex-start,center, row);
                     .top-collections-card-tittle{
                         flex: 1 1 auto;
+                        margin-left: 16px;
                         margin-right: 16px;
                         font-size: 16px;
                         
@@ -247,9 +248,7 @@ export default {
                             object-fit: contain;
                         }
 
-                        span{
-                            font-size: 1.3rem;
-                        }
+                        
                     }
 
                     .top-collections-card-stats{
@@ -281,43 +280,142 @@ export default {
                     min-height: auto;
                     .last-sale-img{
                         @include flex (flex-start,center, column);
-                        padding: 1rem;
-                        margin: 1rem;
+                        padding: 0rem;
+                        margin: 0rem;
                         img{
                             width: 100%;
-                            width: 200;
-                            height: 200px;
+                            height: 100%;
                         }
                     }
                     .last-sale-text{
                         @include flex (center,center, column);
                         .last-sale-tittle{
                             flex: 1 0;
+                            h4{
+                                font-size: 8vw;   
+                            }
+                            span{
+                                display: none;    
+                            }
+                        }
+
+                        .last-sale-bid{
                             span{
                                 display: none;
                             }
+                            h4{
+                                font-size: 7vw;
+                            }
                         }
-                        .last-sale-bid{
-                            flex: 1 0;
-                        }
+                        
                         
                     }
                     
                 }
                 .second-top-column{
-                    flex: 1 0;
+                    /*background-color: blue;*/
+                    flex: 1 0 100%;
                     height: 100vh;
                     min-height: auto;
                     margin-top: 4rem;
+                    .last-bid-card{
+                        @include flex (center,center, row);
+
+                        .last-bid-card-img{
+                            flex: 1 0;
+                            margin: 2rem 0rem 0rem 0rem;
+                        }
+                        .last-bid-card-content{
+                            @include flex (center,center, column);
+                            .last-bid-card-tittle{
+                                h4{
+                                    font-size: 10vw;
+                                }
+                            }
+                            .last-bid-card-button
+                            {
+                                button{
+                                    padding: 2rem;
+                                    font-size: 6vw;
+                                }
+                            }
+                            .last-bid-card-price{
+                                margin-top: 1rem;
+                                span{
+                                    margin-left: 1rem;
+                                    font-size: 6vw;
+                                }
+                                img{
+                                    width:10%;
+                                    height:10%;
+                                }
+                            }
+                            
+                            
+                        }
+                    }
+                    
+                    
                 }
                 .third-top-column{
                     flex: 1 0;
                     height: 100vh;
                     min-height: auto;
                     margin-top: 4rem;
+                    .top-collections-tittle{
+                        padding: 2rem;
+                        h3{
+                            font-size: 8vw;
+                        }
+                        h5{
+                            font-size: 6vw;
+                        }
+                    }
+                    .top-collections-card{
+                        margin: 2rem 0rem 0rem 0rem;
+                        .top-collections-card-number{
+                            flex: 1 0 5vw;
+                            h4{
+                                font-size: 6vw;
+                            }
+                            
+                        }
+                        .top-collections-card-img{
+                            flex: 1 0 20vw;
+                            img{
+                                width: 60%;
+                                height: 60%;
+                            }
+                        }
+                        .top-collections-card-content{
+                            flex: 1 0 50vw;
+                            @include flex (center,center, column);
+                            .top-collections-card-tittle{
+                                h5{
+                                    font-size: 3vh;
+                                }
+                                img{
+                                    width: 10%;
+                                    height: 10%;
+                                }
+                            }
+                        .top-collections-card-price{                            
+                            span{
+                                margin-left: 1rem;
+                                font-size: 2.5vh;
+                            }
+                        }
+                        .top-collections-card-stats{
+                            margin-top: 1rem;
+                            span{
+                                font-size: 2.5vh;
+                            }
+                        }
+                    }
                 }
-            
             }
-            /*Fin featured vue*/
+            
         }
+            /*Fin featured vue*/
+    }
 </style>

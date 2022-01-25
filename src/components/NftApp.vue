@@ -76,7 +76,7 @@ export default {
 
     @media screen and (max-width:912px){
         html, body {
-            font-size: 40.5%;
+            font-size: 50%;
             margin: 0;
             padding: 0;
         }
@@ -84,7 +84,7 @@ export default {
         
         /* header */
         .main-head{
-            width: 100%;
+            width: 95%;
         }
 
 

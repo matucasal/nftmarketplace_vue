@@ -168,6 +168,10 @@
                 flex: 1 1 auto;
                 margin-top: 5rem;
                 text-align: center;
+                p{
+                   margin-top: 2rem;
+                   font-size: 6vw; 
+                }
                 
                 
                 .intro-button{
@@ -175,6 +179,8 @@
                     flex: 1 1 auto;
                     .explore-button{
                         width: 100%;
+                        padding: 3rem;
+                        font-size: 6vw;
                     }
                 }
                 .intro-stats{
@@ -187,7 +193,7 @@
                 
             }
             .intro-images{
-                    flex: 1 1 30rem;
+                    flex: 1 1 auto;
                     margin-top: 5rem;
                     svg {
                         display: block;
@@ -199,19 +205,36 @@
         
 
         .intro-extra{
+            margin-top: 8rem;
             font-size: 1.2rem;
             padding-top: 5rem;
             @include flex (center,center, column);
             .column_extra1{
                 margin-top: 2rem;
+                h3{
+                    padding: 1rem;
+                    font-size: 8vw;
+                }
             }
             .column_extra2{
                 margin-top: 2rem;
+                h4{
+                    font-size: 7vw;
+                }
+                span{
+                    font-size: 5vw;
+                }
+                
             }
             .column_extra3{
                 margin-top: 2rem;
                 margin-bottom: 2rem;
-                
+                h4{
+                    font-size: 7vw;
+                }
+                span{
+                    font-size: 5vw;
+                }
             }
         }
         
