@@ -319,6 +319,8 @@ export default {
                     min-height: auto;
                     margin-top: 4rem;
                     .last-bid-card{
+                        border-bottom: 1px solid $border-bottom-color;
+                        padding-bottom: 2rem;
                         @include flex (center,center, row);
 
                         .last-bid-card-img{
@@ -373,6 +375,8 @@ export default {
                     }
                     .top-collections-card{
                         margin: 2rem 0rem 0rem 0rem;
+                        border-bottom: 1px solid $border-bottom-color;
+                        padding-bottom: 2rem;
                         .top-collections-card-number{
                             flex: 1 0 5vw;
                             h4{
