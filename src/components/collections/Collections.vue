@@ -22,11 +22,11 @@ export default {
 
 <style lang="scss">
 .collections-section{
-    margin-top: 3vh;
-    min-height: 90vh;
+    margin-top: 3vh; 
     width: 100%;
+    height: auto;
     background-color: #D9E0EC;
-    padding: 6rem;
+    padding: 2rem;
     .collections-section-tittle{
         h3{
         }

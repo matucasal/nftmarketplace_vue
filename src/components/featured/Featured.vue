@@ -91,13 +91,14 @@ export default {
 
 <style lang="scss">
     .top-section {
-        margin-top: 2vh;
-        width: 100%;
-        height: 100vh;
+        margin-top: 3vh;
+        margin-left: 3vh;
+        width: 90%;
+        height: auto;
         flex-wrap: wrap;
         @include flex (flex-start,center, row);
         .first-top-column{
-            height: 100vh;
+            min-height: 60vh;
             flex: 1 1 10rem;
             @include flex (flex-start,center, column);
             .last-sale-img{
@@ -136,8 +137,8 @@ export default {
             }
         }
         .second-top-column{
-            height: 100vh;
-            flex: 1 1 1rem;
+            min-height: 60vh;
+            flex: 1 1 10rem;
             @include flex (flex-start,center, column);
             
             .last-bid-card{
@@ -196,7 +197,7 @@ export default {
             }
         }
         .third-top-column{
-            height: 100vh;
+            min-height: 60vh;
             flex: 1 1 10rem;
             @include flex (flex-start, flex-start, column);
             .top-collections-tittle{
@@ -371,10 +372,10 @@ export default {
                     .top-collections-tittle{
                         padding: 2rem;
                         h3{
-                            font-size: 8vw;
+                            font-size: 6vw;
                         }
                         h5{
-                            font-size: 6vw;
+                            font-size: 4vw;
                         }
                     }
                     .top-collections-card{
