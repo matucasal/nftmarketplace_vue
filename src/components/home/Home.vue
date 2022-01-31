@@ -124,6 +124,7 @@
     .intro-images{
         flex: 1 1 60rem;
         margin-left: 1rem;
+        margin-left: auto;
         svg {
             height: 80%;
             width: 80%;
@@ -157,7 +158,7 @@
     }
 
     
-    @media screen and (max-width:912px){
+    @media screen and (max-width:1140px){
         
          /*HOme vue*/
         /*Texto y titulo*/

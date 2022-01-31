@@ -91,25 +91,26 @@ export default {
 
 <style lang="scss">
     .top-section {
-        min-height: 90vh;
+        margin-top: 2vh;
         width: 100%;
+        height: 100vh;
         flex-wrap: wrap;
         @include flex (flex-start,center, row);
         .first-top-column{
-            height: 70vh;
-            min-height: 50vh;
+            height: 100vh;
             flex: 1 1 10rem;
-            @include flex (space-between,center, column);
+            @include flex (flex-start,center, column);
             .last-sale-img{
+                flex: 1 1 auto;
                 img{
                     box-sizing: border-box;
-                    width: 400px;
-                    height: 400px;
+                    width: 100%;
+                    height: 100%;
                     object-fit: contain;
                 }
             }
             .last-sale-text{
-                margin: 1rem;
+                flex: 0 1 auto;
                 @include flex (space-between,center, row);
                 .last-sale-tittle{
                     margin: 0rem 5rem 0rem 5rem;
@@ -124,8 +125,8 @@ export default {
                     }
                     img {
                         box-sizing: border-box;
-                        width: 20px;
-                        height: 20px;
+                        width: 20%;
+                        height: 20%;
                         object-fit: contain;
                     }
                     h4{
@@ -135,28 +136,26 @@ export default {
             }
         }
         .second-top-column{
-            height: 70vh;
-            min-height: 50vh;
-            flex: 1 1 10rem;
-            @include flex (space-between,center, column);
+            height: 100vh;
+            flex: 1 1 1rem;
+            @include flex (flex-start,center, column);
             
             .last-bid-card{
                 margin-top: 0rem;
-                margin: 0rem 5rem 5rem 5rem;
-                flex: 1 1 10rem;
-                @include flex (space-between,center, row);
+                margin: 0rem 0rem 5rem 5rem;
+                flex: 1 1 auto;
+                @include flex (flex-start,center, row);
                 .last-bid-card-img{
-                    flex: 1 1 10rem;
+                    flex: 0 1 50%;
                     img{
-                        box-sizing: border-box;
-                        width: 100px;
-                        height: 100px;
-                        object-fit: contain;
+                        width: 55%;
+                        height:  55%;
+                        object-fit: cover;
                     }
                 }
                 .last-bid-card-content{
-                    margin: 1rem 5rem 0rem 3rem;
-                    flex: 1 1 auto;
+                    margin: 1rem 5rem 0rem 0rem;
+                    flex: 1 1 50%;
                     @include flex (center,center, column);
                     .last-sale-bid-price{
                         @include flex (space-between,center, row);
@@ -197,8 +196,7 @@ export default {
             }
         }
         .third-top-column{
-            height: 70vh;
-            min-height: 50vh;
+            height: 100vh;
             flex: 1 1 10rem;
             @include flex (flex-start, flex-start, column);
             .top-collections-tittle{
@@ -212,7 +210,7 @@ export default {
                 }
             }
             .top-collections-card{
-                margin: 2rem 5rem 2rem 0rem;
+                margin: 0.5rem 5rem 2rem 0rem;
                 padding: 0.7rem;
                 @include flex (center,center, row);
                 .top-collections-card-number{
@@ -268,16 +266,15 @@ export default {
 
 
 
-        @media screen and (max-width:912px){
+        @media screen and (max-width:1140px){
             /*Featured vue*/
             .top-section {
-                margin-top: 5rem;
                 flex-wrap: wrap;
+                height: auto;
                 @include flex (center,center, column);
                 .first-top-column{
+                    height: auto;
                     flex: 1 0;
-                    height: 100vh;
-                    min-height: auto;
                     .last-sale-img{
                         @include flex (flex-start,center, column);
                         padding: 0rem;
@@ -292,7 +289,7 @@ export default {
                         .last-sale-tittle{
                             flex: 1 0;
                             h4{
-                                font-size: 8vw;   
+                                font-size: 6vw;   
                             }
                             span{
                                 display: none;    
@@ -304,7 +301,10 @@ export default {
                                 display: none;
                             }
                             h4{
-                                font-size: 7vw;
+                                font-size: 5vw;
+                            }
+                            img{
+                                display: none;
                             }
                         }
                         
@@ -315,9 +315,9 @@ export default {
                 .second-top-column{
                     /*background-color: blue;*/
                     flex: 1 0 100%;
-                    height: 100vh;
+                    height: auto;
                     min-height: auto;
-                    margin-top: 4rem;
+                    margin-top: 3vh;
                     .last-bid-card{
                         border-bottom: 1px solid $border-bottom-color;
                         padding-bottom: 2rem;
@@ -326,12 +326,16 @@ export default {
                         .last-bid-card-img{
                             flex: 1 0;
                             margin: 2rem 0rem 0rem 0rem;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                            }
                         }
                         .last-bid-card-content{
                             @include flex (center,center, column);
                             .last-bid-card-tittle{
                                 h4{
-                                    font-size: 10vw;
+                                    font-size: 7vw;
                                 }
                             }
                             .last-bid-card-button
@@ -361,9 +365,9 @@ export default {
                 }
                 .third-top-column{
                     flex: 1 0;
-                    height: 100vh;
+                    height: auto;
                     min-height: auto;
-                    margin-top: 4rem;
+                    margin-top: 3vh;
                     .top-collections-tittle{
                         padding: 2rem;
                         h3{
