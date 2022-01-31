@@ -42,6 +42,7 @@ export default {
 @media screen and (max-width:912px){
     .collections-section{
         padding: 3rem;
+        margin-top: 5rem;
         .collections-section-tittle{
         }
         .collections-section-content{
