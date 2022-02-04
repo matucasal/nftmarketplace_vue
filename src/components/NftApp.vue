@@ -4,6 +4,7 @@
         <Home/>
         <Featured/>
         <Collections/>
+        <SignUp/>
     </div>
 </template>
 
@@ -13,6 +14,7 @@ import Header from './header/Header.vue';
 import Home from './home/Home.vue';
 import Featured from './featured/Featured.vue';
 import Collections from './collections/Collections.vue';
+import SignUp from './signup/SignUp.vue';
 
 export default {
     name: 'NftApp',
@@ -21,6 +23,7 @@ export default {
         Home,
         Featured,
         Collections,
+        SignUp
     }
 }
 </script>
