@@ -272,14 +272,14 @@ export default {
             /*Featured vue*/
             .top-section {
                 flex-wrap: wrap;
-                width: 90%;
+                width: 85%;
                 height: auto;
                 @include flex (center,center, column);
                 .first-top-column{
                     height: auto;
                     flex: 1 0;
                     .last-sale-img{
-                        @include flex (flex-start,center, column);
+                        @include flex (center,center, column);
                         padding: 0rem;
                         margin: 0rem;
                         img{
@@ -327,10 +327,10 @@ export default {
 
                         .last-bid-card-img{
                             flex: 1 0;
-                            margin: 2rem 20rem 0rem 0rem;
+                            margin: 2rem 5rem 0rem 0rem;
                             img{
-                                width: 30vh;
-                                height: 30vh;
+                                width: 10vh;
+                                height: 10vh;
                             }
                         }
                         .last-bid-card-content{
