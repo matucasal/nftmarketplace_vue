@@ -100,6 +100,9 @@ export default {
             .logo{
                 flex: 1 1 10rem;
                 margin-top: 2rem;
+                h1{
+                    font-size: 7vh;
+                }
             }
             .menu-header { 
                 display: none;
@@ -110,6 +113,10 @@ export default {
             }
         }
         /* fin header */
+
+        .webapp{
+            width: 100%;
+        }
    
     }
 

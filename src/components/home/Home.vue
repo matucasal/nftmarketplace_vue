@@ -122,7 +122,7 @@
     }
 
     .intro-images{
-        flex: 1 1 60rem;
+        flex: 1 1 auto;
         margin-left: 1rem;
         margin-left: auto;
         svg {
@@ -171,9 +171,12 @@
                 text-align: center;
                 p{
                    margin-top: 2rem;
-                   font-size: 6vw; 
+                   font-size: 5vw; 
                 }
                 
+                h2{
+                    font-size: 7vw;
+                }
                 
                 .intro-button{
                     margin-top: 5rem;
@@ -207,10 +210,10 @@
 
         .intro-extra{
             margin-top: 8rem;
-            font-size: 1.2rem;
             padding-top: 5rem;
             @include flex (center,center, column);
             .column_extra1{
+                flex: 1 1 auto;
                 margin-top: 2rem;
                 h3{
                     padding: 1rem;
@@ -218,6 +221,7 @@
                 }
             }
             .column_extra2{
+                flex: 1 1 auto;
                 margin-top: 2rem;
                 h4{
                     font-size: 7vw;
@@ -228,6 +232,7 @@
                 
             }
             .column_extra3{
+                flex: 1 1 auto;
                 margin-top: 2rem;
                 margin-bottom: 2rem;
                 h4{
