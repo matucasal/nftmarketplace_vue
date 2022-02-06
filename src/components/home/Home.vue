@@ -48,7 +48,7 @@
 
 <style lang="scss" scoped>
     .intro {
-        min-height: 90vh;
+        min-height: 50vh;
         width: 90%;
         margin: auto;
         flex-wrap: wrap;
