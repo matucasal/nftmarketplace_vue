@@ -271,7 +271,6 @@ export default {
         @media screen and (max-width:1140px){
             /*Featured vue*/
             .top-section {
-                border: solid 1px red;
                 flex-wrap: wrap;
                 height: auto;
                 margin: 0;

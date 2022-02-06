@@ -219,17 +219,17 @@
                 margin-top: 2rem;
                 h3{
                     padding: 1rem;
-                    font-size: 8vw;
+                    font-size: 7vw;
                 }
             }
             .column_extra2{
                 flex: 1 1 auto;
                 margin-top: 2rem;
                 h4{
-                    font-size: 7vw;
+                    font-size: 4.5vw;
                 }
                 span{
-                    font-size: 5vw;
+                    font-size: 4.5vw;
                 }
                 
             }
@@ -238,10 +238,10 @@
                 margin-top: 2rem;
                 margin-bottom: 2rem;
                 h4{
-                    font-size: 7vw;
+                    font-size: 4.5vw;
                 }
                 span{
-                    font-size: 5vw;
+                    font-size: 4.5vw;
                 }
             }
         }
