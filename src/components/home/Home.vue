@@ -3,7 +3,7 @@
         <section class="intro">
             <div class="intro-text">
                 <h2>DESCUBRÍ Y COLECCIONÁ <br/> ARTE DIGITAL NFT</h2>
-                <p>Mercado digital para coleccionistas de non-fungible tokens (NFTs). Comprá, vendé y descubrí nuestros assets exclusivos.</p>
+                <p>Mercado digital para coleccionistas de non-fungible tokens (NFTs). <br/> Comprá, vendé y descubrí nuestros assets exclusivos.</p>
                 
                 <div class="intro-button">
                     <button class="explore-button" type="submit">Explorá ahora</button>
@@ -68,61 +68,60 @@
     }
 
     .intro-text{
-        flex: 1 0 20rem;
-        @include flex (center,center, column);
+        flex: 1 1 60%;
+        @include flex (flex-start,flex-start, column);
+            .intro-button{
+                margin-top: 4rem;
+            a{
+                margin-right: 4rem;
+            }
+            .explore-button{
+                width: 100%;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                border: none;
+                background-color: #3D00B7;
+                color: white;
+                border-color: #3D00B7;
+                border-radius: 30px;
+                min-height: 46px;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                box-sizing: inherit;
+            }
+            }
+
+        .intro-stats{
+            @include flex (space-around,center, row);
+            font-size: 1.5rem;
+            .column_stats1{
+                margin-right: 2rem;
+                flex: 1 1 auto;
+                align-items: center;
+                justify-content: center;
+            }
+            .column_stats2{
+                margin-right: 2rem;
+                flex: 1 1 auto;
+                align-items: center;
+                justify-content: center;
+            }
+            .column_stats3{
+                margin-right: 2rem;
+                flex: 1 1 auto;
+                align-items: center;
+                justify-content: center;
+            }
+        }
     }
 
-    .intro-button{
-        margin-top: 4rem;
-        a{
-            margin-right: 4rem;
-        }
-        .explore-button{
-            width: 100%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            border: none;
-            background-color: #3D00B7;
-            color: white;
-            border-color: #3D00B7;
-            border-radius: 30px;
-            min-height: 46px;
-            padding-left: 1rem;
-            padding-right: 1rem;
-            box-sizing: inherit;
-        }
-    }
-
-    .intro-stats{
-        margin: auto;
-        flex-wrap: wrap;
-        @include flex (space-around,center, row);
-        font-size: 1.5rem;
-        .column_stats1{
-            margin-right: 2rem;
-            flex: 1 1 auto;
-            align-items: center;
-            justify-content: center;
-        }
-        .column_stats2{
-            margin-right: 2rem;
-            flex: 1 1 auto;
-            align-items: center;
-            justify-content: center;
-        }
-        .column_stats3{
-            margin-right: 2rem;
-            flex: 1 1 auto;
-            align-items: center;
-            justify-content: center;
-        }
-    }
+    
 
     .intro-images{
-        flex: 1 1 auto;
+        flex: 1 1 40%;
         margin-left: 1rem;
         margin-left: auto;
         svg {
@@ -180,6 +179,7 @@
                 
                 .intro-button{
                     margin-top: 5rem;
+                    margin: 5rem auto 0 auto;
                     flex: 1 1 auto;
                     .explore-button{
                         width: 100%;
@@ -190,6 +190,8 @@
                 .intro-stats{
                     flex: 1 1 auto;
                     margin-top: 0rem;
+                    margin: auto;
+                    flex-wrap: wrap;
                     .column_stats1{margin: 2rem;}
                     .column_stats2{margin: 2rem;}
                     .column_stats3{margin: 2rem;}
