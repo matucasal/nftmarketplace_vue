@@ -271,9 +271,10 @@ export default {
         @media screen and (max-width:1140px){
             /*Featured vue*/
             .top-section {
+                border: solid 1px red;
                 flex-wrap: wrap;
-                width: 85%;
                 height: auto;
+                margin: 0;
                 @include flex (center,center, column);
                 .first-top-column{
                     height: auto;
@@ -283,8 +284,8 @@ export default {
                         padding: 0rem;
                         margin: 0rem;
                         img{
-                            width: 100%;
-                            height: 100%;
+                            width: 80%;
+                            height: 85%;
                         }
                     }
                     .last-sale-text{
