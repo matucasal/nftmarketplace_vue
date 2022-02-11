@@ -6,7 +6,8 @@
                 <p>Mercado digital para coleccionistas de non-fungible tokens (NFTs). <br/> Comprá, vendé y descubrí nuestros assets exclusivos.</p>
                 
                 <div class="intro-button">
-                    <button class="explore-button" type="submit">Explorá ahora</button>
+                    <!--<button class="explore-button" type="submit">Explorá ahora</button>-->
+                    <CoolBlueButton texto="Explorá ahora"/>
                 </div>
 
                 <div class="intro-stats">
@@ -46,6 +47,15 @@
     </div>
 </template>
 
+<script>
+import CoolBlueButton from '../common/components/CoolBlueButton.vue'
+export default {
+    components: {
+        CoolBlueButton
+    }
+}
+</script>
+
 <style lang="scss" scoped>
     .intro {
         min-height: 50vh;
@@ -75,24 +85,15 @@
             a{
                 margin-right: 4rem;
             }
-            .explore-button{
-                width: 100%;
-                cursor: pointer;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                border: none;
-                background-color: #3D00B7;
-                color: white;
-                border-color: #3D00B7;
-                border-radius: 30px;
+            .cool-blue-button {
+                width: 80%;
                 min-height: 46px;
                 padding-left: 1rem;
                 padding-right: 1rem;
                 box-sizing: inherit;
             }
-            }
+            
+        }
 
         .intro-stats{
             @include flex (space-around,center, row);
@@ -181,10 +182,10 @@
                     margin-top: 5rem;
                     margin: 5rem auto 0 auto;
                     flex: 1 1 auto;
-                    .explore-button{
+                    .cool-blue-button{
                         width: 100%;
-                        padding: 3rem;
-                        font-size: 6vw;
+                        padding: 4rem;
+                        font-size: 4vw;
                     }
                 }
                 .intro-stats{

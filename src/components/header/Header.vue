@@ -20,7 +20,8 @@
                         </form>
                     </section>
                     <section class="actions-section">
-                        <button class="upload-button" type="submit">Subir</button>
+                        <!-- <button class="upload-button" type="submit">Subir</button>-->
+                        <CoolBlueButton texto="Subir"/>
                         <button class="connect-wallet-button" type="submit">Conectar Wallet</button>
                     </section>
                 </div>
@@ -31,10 +32,12 @@
 <script>
 
 import BurgerMenu from './BurgerMenu.vue'
+import CoolBlueButton from '../common/components/CoolBlueButton.vue'
 
 export default {
     components: {
-        BurgerMenu
+        BurgerMenu,
+        CoolBlueButton
     }
 }
 </script>
@@ -82,25 +85,6 @@ nav{
     }
     
 
-    .upload-button{
-        width: 80%;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        border: none;
-        background-color: #3D00B7;
-        color: white;
-        border-color: #3D00B7;
-        border-radius: 30px;
-        min-height: 46px;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        margin: 0px;
-        margin: 1rem;
-        box-sizing: inherit;
-    }
     .connect-wallet-button{
         width: 80%;
         cursor: pointer;
